@@ -4,6 +4,10 @@ version = "0.1.0"
 edition = "2021"
 authors = ["Scr44gr <scr44gr@protonmail.com>"]
 description = "Library to extract crypto pairs text from images, for Python."
+homepage = "https://github.com/Scr44gr/ocr_rusty"
+repository = "https://github.com/Scr44gr/ocr_rusty"
+readme = "README.md"
+license = "MIT"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 [lib]
