@@ -11,12 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Version info
-    - run: rustc --version; cargo --version
+      run: rustc --version; cargo --version
     - name: Install tesseract
-    - run: sudo apt-get install libleptonica-dev libtesseract-dev clang tesseract-ocr-eng
+      run: sudo apt-get install libleptonica-dev libtesseract-dev clang tesseract-ocr-eng
     - uses: actions/checkout@v2
     - name: Run tests
-    - run: cargo test -- verbose
+      run: cargo test -- verbose
     - uses: messense/maturin-action@v1
       with:
         manylinux: auto
