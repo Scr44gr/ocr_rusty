@@ -28,20 +28,6 @@ jobs:
         name: wheels
         path: dist
 
-  macos:
-    runs-on: macos-latest
-    steps:
-    - uses: actions/checkout@v2
-    - uses: messense/maturin-action@v1
-      with:
-        command: build
-        args: --release --no-sdist -o dist --universal2
-    - name: Upload wheels
-      uses: actions/upload-artifact@v2
-      with:
-        name: wheels
-        path: dist
-
   release:
     name: Release
     runs-on: ubuntu-latest
