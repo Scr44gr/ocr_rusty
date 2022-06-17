@@ -5,6 +5,7 @@ on:
 
 env:
   CARGO_TERM_COLOR: always
+  VCPKGRS_DYNAMIC: true
 
 jobs:
   linux:
@@ -13,7 +14,9 @@ jobs:
     - name: Version info
       run: rustc --version; cargo --version
     - name: Install tesseract
-      run: sudo apt-get install libleptonica-dev libtesseract-dev clang tesseract-ocr-eng
+      run: sudo apt-get install libleptonica-dev libtesseract-dev clang; sudo apt-get install libleptonica-dev libtesseract-dev clang tesseract-ocr-eng;
+    - name: Install python
+      run: sudo apt install python3-dev
     - uses: actions/checkout@v2
     - name: Run tests
       run: sudo apt install gcc-multilib; cargo test -- verbose
